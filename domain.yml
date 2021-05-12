@@ -1,0 +1,15 @@
+version: "2.0"
+
+intents:
+  - ask_question
+
+actions:
+  - action_answer_api
+
+responses:
+  utter_answer:
+  - text: Answer: {answer}
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

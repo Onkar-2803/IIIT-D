@@ -1,0 +1,10 @@
+version: "2.0"
+
+nlu:
+- intent: ask_question
+  examples: |
+    - What is datascience
+    - what is machine learning
+    - what is nlp
+    - how is tf idfimplemented
+    - Artificial intelligence
