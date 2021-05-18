@@ -6,3 +6,4 @@ stories:
   steps:
   - intent: ask_question
   - action: action_answer_api
+  - action: utter_answer

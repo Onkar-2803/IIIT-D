@@ -12,6 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from call_api import qna_api
+from rasa_sdk.events import SlotSet
 
 
 class ActionHelloWorld(Action):
@@ -25,7 +26,9 @@ class ActionHelloWorld(Action):
 
         question = tracker.latest_message['text']
         temp = qna_api(question)
-        print(temp)
-        dispatcher.utter_template("utter_answer", tracker, answer=temp )
+        # print(type(temp))
+        # print(temp)
+        return[SlotSet("answer", temp)]
+        # dispatcher.utter_message(response ="utter_answer")
 
-        return []
+        # return []

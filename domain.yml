@@ -6,9 +6,14 @@ intents:
 actions:
   - action_answer_api
 
+slots:
+  answer:
+    type: text
+    influence_conversation: false
+
 responses:
   utter_answer:
-  - text: Answer: {answer}
+  - text: Answer- {answer}
 
 session_config:
   session_expiration_time: 60
